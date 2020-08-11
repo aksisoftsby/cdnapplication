@@ -8,7 +8,7 @@
   font-size: 16px;
   padding: 20px;
   position: relative;
-  color: #1b2e4b;
+  color: #800020;
   letter-spacing: -0.2px; }
   @media (min-width: 992px) {
     .content-components {
@@ -42,13 +42,13 @@
       .df-breadcrumbs .breadcrumb-item {
         letter-spacing: .5px; } }
     .df-breadcrumbs .breadcrumb-item a {
-      color: #1b2e4b;
+      color: #800020;
       transition: all 0.2s ease-in-out; }
       @media (prefers-reduced-motion: reduce) {
         .df-breadcrumbs .breadcrumb-item a {
           transition: none; } }
     .df-breadcrumbs .breadcrumb-item.active {
-      color: #0168fa; }
+      color: #800020; }
     .df-breadcrumbs .breadcrumb-item + .breadcrumb-item {
       padding-left: 8px; }
       .df-breadcrumbs .breadcrumb-item + .breadcrumb-item::before {
@@ -141,18 +141,18 @@
     display: block;
     margin-bottom: 15px; }
   .section-nav .nav-link {
-    color: #1b2e4b;
+    color: #800020;
     padding: 0;
     display: block;
     position: relative;
     white-space: nowrap;
     font-size: 13px; }
     .section-nav .nav-link:hover {
-      color: #0168fa; }
+      color: #800020; }
     .section-nav .nav-link + .nav-link {
       margin-top: 5px; }
     .section-nav .nav-link.active {
-      color: #0168fa;
+      color: #800020;
       font-weight: 500;
       letter-spacing: -.12px; }
       .section-nav .nav-link.active::after {
@@ -161,7 +161,7 @@
         top: 50%;
         right: -31px;
         margin-top: -.5px;
-        background-color: #0168fa;
+        background-color: #800020;
         height: 1px;
         width: 30px; }
 
@@ -307,7 +307,7 @@
     .demo-animate-list .nav-link + .nav-link {
       margin-top: 1px; }
     .demo-animate-list .nav-link.active {
-      background-color: #0168fa;
+      background-color: #800020;
       color: #fff; }
 
 .demo-animate-item {
