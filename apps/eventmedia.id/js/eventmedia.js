@@ -478,10 +478,10 @@
 		scrollToTop();
 		headerSticky();
 		stickySidebar();
-		customSlickSlider();
+		// customSlickSlider();
 		mobileMenu();
 		scrollProgress();
-		niceSelectBox();
+		// niceSelectBox();
 		openSearchForm();
 		VSticker();
 		sliderRange();
