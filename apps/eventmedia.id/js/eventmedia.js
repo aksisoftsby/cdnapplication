@@ -483,7 +483,7 @@
 		scrollProgress();
 		// niceSelectBox();
 		openSearchForm();
-		VSticker();
+		// VSticker();
 		sliderRange();
 		gridListActive();
 		gridListView();
