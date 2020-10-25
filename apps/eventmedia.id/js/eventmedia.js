@@ -478,7 +478,7 @@
 		scrollToTop();
 		headerSticky();
 		stickySidebar();
-		// customSlickSlider();
+		customSlickSlider();
 		mobileMenu();
 		scrollProgress();
 		// niceSelectBox();
