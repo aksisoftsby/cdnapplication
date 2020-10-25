@@ -244,10 +244,10 @@
 
 	// Nice Select
 	// var niceSelectBox = function () {
-		// var nice_Select = $('select');
-		// if (nice_Select.length) {
-			// nice_Select.niceSelect();
-		// }
+	// var nice_Select = $('select');
+	// if (nice_Select.length) {
+	// nice_Select.niceSelect();
+	// }
 	// };
 
 	//Header sticky
@@ -519,4 +519,7 @@ jQuery(document).ready(() => {
 				}
 			}
 		});
+	jQuery('#idcity').select2();
+	jQuery('#idcategory').select2({multiple: true});
+
 })
