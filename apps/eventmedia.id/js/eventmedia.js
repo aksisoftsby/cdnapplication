@@ -4,9 +4,7 @@
 	// Page loading
 	$(window).on('load', function () {
 		$('#preloader-active').delay(450).fadeOut('slow');
-		$('body').delay(450).css({
-			'overflow': 'visible'
-		});
+		// $('body').delay(450).css({'overflow': 'visible'});
 	});
 
 	// Scroll progress
@@ -519,7 +517,69 @@ jQuery(document).ready(() => {
 				}
 			}
 		});
-	jQuery('#idcity').select2();
-	jQuery('#idcategory').select2({multiple: true});
+
+	try {
+		jQuery('#idcity').select2();
+		jQuery('#idcategory').select2({multiple: true});
+	} catch (exception) {
+		console.log("no Select2");
+	}
+
 
 })
+
+var eventimage = () => {
+	$('<input>', {'type': 'file', 'name': 'image'})
+		.on('change', (e) => {
+			console.log(e.target.files);
+			if (typeof e.target.files !== 'undefined') {
+				if (e.target.files.length > 0) {
+					var frm = new FormData();
+					frm.append('upload', true);
+					frm.append('image', e.target.files[0]);
+					jQuery.ajax({
+						url: "/submit",
+						data: frm,
+						type: "POST",
+						contentType: false,
+						processData: false,
+						beforeSend: () => {
+							$('#eventposter')
+								// <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+								.before($("<div>", {'class': 'lds-ring', 'id': 'id-lds-ring'})
+									.append($('<div>'))
+									.append($('<div>'))
+									.append($('<div>'))
+									.append($('<div>'))
+									)
+								.hide();
+							console.log('Upload image');
+						},
+						success: e => {
+							// hide this images
+							var euri = (typeof e.url !== 'undefined'
+								? (e.url.substr(0, 4) !== 'http' ? `https://eventmedia.id/${e.url}` : e.url)
+								: false);
+							if (euri) {
+								$('#eventposter')
+									.before($('<div>', {'class': 'col-3'})
+										.append($('<a>', {href: euri, target: '_blank'})
+											.append($('<img>', {src: euri, 'class': 'img-fluid img-responsive img-round'}))
+											.append('Poster Event')))
+									.hide();
+								console.log("change poster value");
+								$("#idposter").val(euri);
+								$("#id-lds-ring").remove();
+							}
+							console.log(e);
+						},
+						error: er => {
+							console.log(er);
+							$("#id-lds-ring").remove();
+							$('#eventposter').show();
+						},
+					});
+				}
+			}
+		}).click();
+}
