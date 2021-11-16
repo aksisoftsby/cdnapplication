@@ -1,0 +1,164 @@
+/* Custom CSS */
+
+/* Whatsapp FAB */
+.whatsapp-fab {
+    position: fixed;
+    cursor: pointer;
+    bottom: 15px;
+    left: 15px;
+    color: #ffffff;
+    background-color: #4dc247;
+    z-index: 50;
+    width: 40px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    border-radius: 50%;
+}
+
+.whatsapp-fab ul {
+    list-style-type: none;
+}
+  
+.whatsapp-fab i {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    font-size: 1.5rem;
+}
+
+.whatsapp-fab ul li a{
+    color: white;
+}
+
+.briket-grades{
+    float: left;
+    width:  250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.text-center{
+    text-align: center;
+}
+
+* + .progress-linear {
+	margin-top: 30px;
+}
+
+.progress-linear + .progress-linear {
+	margin-top: 5px;
+}
+
+.progress-header > * {
+    max-width: 100%;
+}
+
+.box-icon-megan {
+	position: relative;
+	padding: 50px 15px;
+	background: none;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.03);
+	z-index: 1;
+}
+
+@media (min-width: 992px) {
+	.desktop .box-icon-megan {
+		padding: 55px 5px;
+		box-shadow: none;
+	}
+	.desktop .box-icon-megan::before {
+		position: absolute;
+		content: '';
+		top: 5px;
+		right: -10px;
+		bottom: 5px;
+		left: -10px;
+		background: none;
+		transition: all .3s ease-in-out;
+		pointer-events: none;
+		z-index: -1;
+	}
+    
+    .progress-linear + .progress-linear {
+		margin-top: 15px;
+	}
+}
+
+.rd-navbar-panel {
+    transition: none;
+}
+
+@media (min-width: 1200px) {
+	.footer-classic-gmap {
+		right: 10px;
+	}
+}
+
+.slick-product-figure {
+	background: unset;
+}
+
+/* Overwrite style.css */
+* + .list-description {
+	margin-bottom: 32px;
+}
+
+.img-product {
+	max-height: 355px;
+	width: auto !important;
+}
+
+#logo {display: block} 
+#logo2 {display: none}
+
+.rd-navbar-fixed .rd-navbar-submenu-toggle {
+	position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 52px;
+}
+
+@media (max-width: 1199px) {
+    #logo {display: none} 
+    #logo2 {
+        display: flex;
+        margin-left: auto;
+        padding-left: 25px;
+    }
+}
+
+.disabled {
+    opacity: 0.65;
+    pointer-events: none;
+}
+
+.image-same-500 {
+    object-fit: cover;
+    height: 500px;
+}
+
+.image-same-190 {
+    object-fit: cover;
+    height: 190px;
+}
+
+.image-min-h-400 {
+    object-fit: cover;
+    min-height: 400px;
+}
+
+.home-carousel-img {
+    object-fit: cover;
+    width: 370px;
+    height: 436px;
+}
