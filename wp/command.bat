@@ -16,5 +16,14 @@ unzip td-mobile-plugin.zip
 unzip td-social-counter.zip
 unzip td-standard-pack.zip
 
+mysql -e "create database demomuigresik2"
+mysql -e "create database demomuigresik3"
 
+mysqldump demomuigresik1 | mysql demomuigresik2
+mysqldump demomuigresik1 | mysql demomuigresik3
 
+cp -a muigresik1 muigresik2
+cp -a muigresik1 muigresik3
+
+mysql -e "grant all privileges on demomuigresik2.* to wordpressuser@localhost"
+mysql -e "grant all privileges on demomuigresik3.* to wordpressuser@localhost"
