@@ -1,3 +1,6 @@
+chown -R root:root .
+chown -R www-data:www-data wp-content/uploads
+
 -----------------------------------------
 JNEWS
 cd wp-content/themes/
