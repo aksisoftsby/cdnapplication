@@ -76,8 +76,9 @@ mysqldump demomuigresik1 | mysql demomuigresik3
 cp -a muigresik1 muigresik2
 cp -a muigresik1 muigresik3
 
+mysql -e "grant all privileges on demomuigresik1.* to wordpressuser@localhost"
 mysql -e "grant all privileges on demomuigresik2.* to wordpressuser@localhost"
 mysql -e "grant all privileges on demomuigresik3.* to wordpressuser@localhost"
 
-CREATE DATABASE demomuigresik1;
-mysqldump cakrawala | mysql demomuigresik1;
+mysql -e "CREATE DATABASE demomuigresik1"
+mysqldump cakrawala | mysql demomuigresik1
