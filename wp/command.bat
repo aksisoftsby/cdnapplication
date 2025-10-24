@@ -82,3 +82,7 @@ mysql -e "grant all privileges on demomuigresik3.* to wordpressuser@localhost"
 
 mysql -e "CREATE DATABASE demomuigresik1"
 mysqldump cakrawala | mysql demomuigresik1
+
+UPDATE cakra_options 
+SET option_value = REPLACE(option_value, 'cakrawalamuslim.com', 'demo1.cakrawalamuslim.com')
+WHERE option_name IN ('siteurl', 'home');
